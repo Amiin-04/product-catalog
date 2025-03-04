@@ -1,0 +1,46 @@
+public class Product {
+    private String name;
+    private double price;
+    private String category;
+    private int stock;
+
+    // Constructor to initialize product details
+    public Product(String name, double price, String category, int stock) {
+        this.name = name;
+        this.price = price;
+        this.category = category;
+        this.stock = stock;
+    }
+
+    // Getter methods
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    // Method to reduce stock
+    public void reduceStock(int quantity) {
+        if (quantity > 0 && quantity <= stock) {
+            stock -= quantity;
+        } else {
+            System.out.println("Invalid quantity or insufficient stock.");
+        }
+    }
+
+    // toString method to display product details
+    @Override
+    public String toString() {
+        return "Product{name='" + name + "', price=" + price + ", category='" + category + "', stock=" + stock + "}";
+    }
+}
