@@ -11,17 +11,17 @@ public class ProductCatalog {
 
     // Method to add a product
     public void addProduct(Product product) {
-        products.add(product);
+        product.add(product);
         System.out.println(product.getName() + " added to the catalog.");
     }
 
     // Method to display all products
     public void displayProducts() {
-        if (products.isEmpty()) {
+        if (Product.isEmpty()) {
             System.out.println("The catalog is empty.");
         } else {
             System.out.println("Product Catalog:");
-            for (Product product : products) {
+            for (Product product : Products) {
                 System.out.println(product);
             }
         }
